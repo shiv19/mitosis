@@ -980,6 +980,7 @@ export default function Fiddle() {
                   <Tab label={<TabLabelWithIcon label="Svelte" />} value="svelte" />
                 )}
                 <Tab label={<TabLabelWithIcon label="React Native" />} value="reactNative" />
+                <Tab label={<TabLabelWithIcon label="NativeScript Angular" />} value="nativescriptAngular" />
                 <Tab label="RSC" value="rsc" />
                 <Tab label={<TabLabelWithIcon label="Swift" />} value="swift" />
                 <Tab
@@ -1269,6 +1270,17 @@ export default function Fiddle() {
               </div>
               <Divider />
             </Show>
+            <Show when={state.outputTab === 'nativescriptAngular'}>
+              <Alert
+                css={{
+                  border: '1px solid rgb(128 182 224)',
+                  margin: '10px 10px 0 10px',
+                }}
+                severity="info"
+              >
+                NativeScript Angular support is <b>experimental</b>
+              </Alert>
+            </Show>
             <Show when={state.outputTab === 'svelte'}>
               <div
                 css={{
@@ -1469,6 +1481,7 @@ export default function Fiddle() {
                         state.outputTab === 'qwik' ||
                         state.outputTab === 'lit' ||
                         state.outputTab === 'reactNative' ||
+                        state.outputTab === 'nativescriptAngular' ||
                         state.outputTab === 'mitosis' ||
                         state.outputTab === 'template' ||
                         state.outputTab === 'angular' ||
@@ -1546,11 +1559,11 @@ export default function Fiddle() {
           </div>
           <style>
             {`
-              builder-editor { 
-                flex-grow: 1; 
-                pointer-events: ${state.isDraggingBuilderCodeBar ? 'none' : 'auto'}; 
+              builder-editor {
+                flex-grow: 1;
+                pointer-events: ${state.isDraggingBuilderCodeBar ? 'none' : 'auto'};
               }
-              
+
               builder-editor iframe {
                 min-width: unset
               }

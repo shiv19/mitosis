@@ -3,13 +3,14 @@ import { componentToAngular as angular } from './generators/angular';
 import { componentToBuilder } from './generators/builder';
 import {
   componentToCustomElement as customElement,
-  componentToCustomElement as webcomponent,
   componentToHtml as html,
+  componentToCustomElement as webcomponent,
 } from './generators/html';
 import { componentToLiquid as liquid } from './generators/liquid';
 import { componentToLit as lit } from './generators/lit';
 import { componentToMarko as marko } from './generators/marko';
 import { componentToMitosis as mitosis } from './generators/mitosis';
+import { componentToNativescriptAngular as nativescriptAngular } from './generators/nativescript-angular';
 import { componentToQwik as qwik } from './generators/qwik';
 import { componentToPreact as preact, componentToReact as react } from './generators/react';
 import { componentToReactNative as reactNative } from './generators/react-native';
@@ -33,6 +34,7 @@ export const targets = {
   liquid,
   react,
   reactNative,
+  nativescriptAngular,
   solid,
   svelte,
   swift,

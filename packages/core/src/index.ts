@@ -17,6 +17,7 @@ export * from './generators/liquid';
 export * from './generators/lit';
 export * from './generators/marko';
 export * from './generators/mitosis';
+export * from './generators/nativescript-angular';
 export * from './generators/qwik/index';
 export * from './generators/react';
 export * from './generators/react-native';
@@ -34,7 +35,7 @@ export {
   checkIsSvelteComponentFilePath,
   getComponentFileExtensionForTarget,
   renameComponentFile,
-  renameImport,
+  renameImport
 } from './helpers/component-file-extensions';
 export * from './helpers/is-mitosis-node';
 export { checkShouldOutputTypeScript } from './helpers/output';

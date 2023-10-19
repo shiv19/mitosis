@@ -27,6 +27,7 @@ export const generateCode = async ({
     componentToMarko,
     componentToSwift,
     componentToReactNative,
+    componentToNativescriptAngular,
     componentToTemplate,
     componentToSolid,
     componentToAngular,
@@ -76,6 +77,8 @@ export const generateCode = async ({
       return componentToSwift();
     case 'reactNative':
       return componentToReactNative(allOptions);
+    case 'nativescriptAngular':
+      return componentToNativescriptAngular(allOptions);
     case 'template':
       return componentToTemplate(allOptions);
     case 'solid':
